@@ -100,9 +100,10 @@
 					<th>Date</th>
 				</tr>
 				<tr th:each="order :${orders}">
-					<td th:text="${order.user.uname}"></td>
-					<td th:text="${order.user.uemail}"></td>
-					<td th:text="${order.oName}"></td>
+                    <td th:text="${order.user?.uname}">N/A</td>
+                    <td th:text="${order.user?.uemail}">N/A</td>
+
+                    <td th:text="${order.oName}"></td>
 					<td th:text="${order.oPrice}"></td>
 					<td th:text="${order.oQuantity}"></td>
 					<td th:text="${order.totalAmmout}"></td>
